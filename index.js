@@ -1,5 +1,3 @@
-import MyNavbar from "./MyNavbar";
-
 function MainContent() {
     return (
         <h1>Test</h1>
@@ -16,6 +14,8 @@ function tick() {
             <MyNavbar/>
             <MainContent/>
 
+            <HelloTo name='Christian'/>
+
             <h1>Hello, world!</h1>
             <h2>It is {new Date().toLocaleTimeString()}.</h2>
         </div>
@@ -26,5 +26,14 @@ function tick() {
     );
 }
 
-setInterval(tick, 1000);
+function HelloTo(props) {
+    const element = (
+        <div>
+            <p>Hello, world! {props.name}</p>
+        </div>
+    );
 
+    return element;
+}
+
+setInterval(tick, 1000);

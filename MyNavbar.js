@@ -1,4 +1,4 @@
-export function MyNavbar() {
+function MyNavbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
